@@ -1,5 +1,11 @@
 <?php
 /**
+ * @file
+ *   Hides the Title field on Bean create/edit pages if the bean type is in the
+ *   `beannotitle_bean_types` variable defined on the admin page.
+ */
+
+/**
  * Implements hook_form_alter().
  */
 function beannotitle_form_alter(&$form, &$form_state, $form_id) {
@@ -13,6 +19,11 @@ function beannotitle_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
+/**
+ * Implements hook_menu().
+ *
+ * Creates the menu callback for the module admin page.
+ */
 function beannotitle_menu() {
   $items['admin/config/content/beannotitle'] = array(
     'title' => 'Bean - No Title',
