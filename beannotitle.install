@@ -1,0 +1,4 @@
+<?php
+function beannotitle_uninstall() {
+  variable_del('beannotitle_bean_types');
+}
