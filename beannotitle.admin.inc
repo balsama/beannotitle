@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ *   Defines the form used to configure the `beannotitle_bean_types` variable.
+ */
 function beannotitle_admin() {
   $bean_types = array();
   foreach (bean_get_types() as $bean_type) {
